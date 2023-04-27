@@ -69,3 +69,13 @@ input {
   width: 400px;
   height: 45px;
 }
+
+.loginbox input {
+  background-color: #aa718a;
+  border-radius: 20px;
+  left: 252px;
+  position: absolute;
+  top: 530px;
+  width: 266px;
+  text-align: center;
+}
