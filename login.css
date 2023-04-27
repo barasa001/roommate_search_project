@@ -24,10 +24,10 @@
   background-color: rgba(255, 187, 251, 0.46);
   border: 3px solid #f6d1bb;
   border-radius: 20px;
-  height: 650px;
+  height: 700px;
   left: 50%;
   position: absolute;
-  top: calc(50% + 90px);
+  top: calc(50% + 120px);
   width: 800px;
   transform: translate(-50%, -50%);
   vertical-align: middle;
@@ -60,7 +60,7 @@
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 100px;
+  top: 130px;
   width: 272px;
   color: purple;
 }
@@ -75,7 +75,17 @@ input {
   border-radius: 20px;
   left: 150px;
   position: absolute;
-  top: 390px;
+  top: 400px;
+  width: 266px;
+  text-align: center;
+}
+
+.signupbox input {
+  background-color: #aa718a;
+  border-radius: 20px;
+  left: 150px;
+  position: absolute;
+  top: 545px;
   width: 266px;
   text-align: center;
 }
