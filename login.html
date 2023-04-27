@@ -11,12 +11,12 @@
     </div>
     <div class="rectangle">
         <div class="rectangle-item">
-            <a href="#"><h2><b>LOGIN</b></h2></a>
+            <a href="#" id="login-tab"><h2><b>LOGIN</b></h2></a>
         </div>
         <div class="rectangle-item">
-            <a href="#"><h2><b>SIGNUP</b></h2></a>
+            <a href="#" id="signup-tab"><h2><b>SIGNUP</b></h2></a>
         </div>
-        <div class="form">
+        <div class="form" id="login-form">
             <form action="">
                 <label for="email"><h2>Email:</h2></label><br>
                 <input type="email" id="email" name="email"><br>
@@ -24,11 +24,47 @@
                 <input type="password" name="password" id="password">
                 <a href="#"><p><em>Forgot Password?</em></p></a>
             </form>
+            <div class="loginbox">
+                <input type="submit" value="Login">
+            </div>
         </div>
-        <div class="loginbox">
-            <input type="submit" value="Login">
+        <div class="form" id="signup-form" style="display: none;">
+            <form action="">
+                <label for="email"><h3>Email:</h3></label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="username"><h3>Username:</h3></label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password"><h3>Password:</h3></label><br>
+                <input type="password" id="password" name="password"><br>
+                <label for="repeat password"><h3>Repeat Password:</h3></label><br>
+                <input type="password" id="password" name="password"><br>
+            </form>
+            <div class="signupbox" style="display: none;">
+                <input type="submit" value="Signup">
+            </div>
         </div>
     </div>
     <footer></footer>
+
+    <script>
+        const loginTab = document.getElementById('login-tab');
+        const signupTab = document.getElementById('signup-tab');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('active');
+            signupTab.classList.remove('active');
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+        });
+
+        signupTab.addEventListener('click', () => {
+            signupTab.classList.add('active');
+            loginTab.classList.remove('active');
+            signupForm.style.display = 'block';
+            loginForm.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
