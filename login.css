@@ -60,7 +60,7 @@
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 130px;
+  top: 100px;
   width: 272px;
   color: purple;
 }
@@ -75,7 +75,7 @@ input {
   border-radius: 20px;
   left: 150px;
   position: absolute;
-  top: 400px;
+  top: 390px;
   width: 266px;
   text-align: center;
 }
