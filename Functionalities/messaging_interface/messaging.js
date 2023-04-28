@@ -16,7 +16,26 @@ function sendMessage() {
     addMessageToContainer(message);
     messageInput.value = '';
     messageInput.focus();
+
     // Send the message to the server or other recipient
+    const data = { text: text, recipient: 'example@recipient.com' };
+    fetch('/send-message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+      // handle successful response if needed
+    })
+    .catch(error => {
+      console.error(error);
+      // handle error if needed
+    });
   }
 }
 
